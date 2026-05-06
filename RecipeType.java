@@ -1,6 +1,6 @@
 
 /**
- * Enumeration class RecipeType - write a description of the enum class here
+ * Represents the type of a recipe.
  *
  * @author Timur Turdaliev
  * @version 1.0

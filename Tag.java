@@ -1,6 +1,6 @@
 
 /**
- * Enumeration class Tag - write a description of the enum class here
+ * Represents a searchable tag for a recipe.
  *
  * @author Timur Turdaliev
  * @version 1.0
