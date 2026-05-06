@@ -1,33 +1,36 @@
 
 /**
- * Write a description of class BakingRecipe here.
+ * Represents a baking recipe.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class BakingRecipe extends Recipe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private int ovenTemp;
+    private int bakingMins;
 
     /**
-     * Constructor for objects of class BakingRecipe
+     * Constructor for BakingRecipe.
      */
-    public BakingRecipe()
+    public BakingRecipe(String title, String author, int servings, RecipeType type, int ovenTemp, int bakingMins)
     {
-        // initialise instance variables
-        x = 0;
+        super(title, author, servings, type);
+        this.ovenTemp = ovenTemp;
+        this.bakingMins = bakingMins;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public int getOvenTemp() { return ovenTemp; }
+    public int getBakingMins() { return bakingMins; }
+
+    public int getTempFahrenheit()
     {
-        // put your code here
-        return x + y;
+        return (ovenTemp * 9 / 5) + 32;
+    }
+
+    @Override
+    public String getDetails()
+    {
+        return "Oven: " + ovenTemp + "C for " + bakingMins + " minutes";
     }
 }

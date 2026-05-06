@@ -1,33 +1,34 @@
 
 /**
- * Write a description of class DrinkRecipe here.
+ * Represents a drink recipe.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class DrinkRecipe extends Recipe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean isAlcoholic;
+    private boolean servedCold;
+    private int volumeMl;
 
     /**
-     * Constructor for objects of class DrinkRecipe
+     * Constructor for DrinkRecipe.
      */
-    public DrinkRecipe()
+    public DrinkRecipe(String title, String author, int servings, RecipeType type, boolean isAlcoholic, boolean servedCold, int volumeMl)
     {
-        // initialise instance variables
-        x = 0;
+        super(title, author, servings, type);
+        this.isAlcoholic = isAlcoholic;
+        this.servedCold = servedCold;
+        this.volumeMl = volumeMl;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public boolean isAlcoholic() { return isAlcoholic; }
+    public boolean isServedCold() { return servedCold; }
+    public int getVolumeMl() { return volumeMl; }
+
+    @Override
+    public String getDetails()
     {
-        // put your code here
-        return x + y;
+        return "Volume: " + volumeMl + "ml | Alcoholic: " + isAlcoholic + " | Served cold: " + servedCold;
     }
 }

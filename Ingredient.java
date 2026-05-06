@@ -1,33 +1,50 @@
 
 /**
- * Write a description of class Ingredient here.
+ * Represents an ingredient in a recipe.
+
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class Ingredient
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String name;
+    private double quantity;
+    private String unit;
 
     /**
-     * Constructor for objects of class Ingredient
+     * Constructor for Ingredient.
      */
-    public Ingredient()
+    public Ingredient(String name, double quantity, String unit)
     {
-        // initialise instance variables
-        x = 0;
+        this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
     }
 
+    public String getName() { return name; }
+    public double getQuantity() { return quantity; }
+    public String getUnit() { return unit; }
+
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Scales the ingredient by a factor.
      */
-    public int sampleMethod(int y)
+    public void scale(double factor)
     {
-        // put your code here
-        return x + y;
+        quantity = quantity * factor;
+    }
+
+    @Override
+    public String toString()
+    {
+        return quantity + " " + unit + " of " + name;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (!(o instanceof Ingredient)) return false;
+        Ingredient i = (Ingredient) o;
+        return name.equals(i.name);
     }
 }

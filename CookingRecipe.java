@@ -1,33 +1,39 @@
 
 /**
- * Write a description of class CookingRecipe here.
+ * Represents a cooking recipe.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class CookingRecipe extends Recipe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String cookingMethod;
+    private int prepMins;
+    private int cookMins;
 
     /**
-     * Constructor for objects of class CookingRecipe
+     * Constructor for CookingRecipe.
      */
-    public CookingRecipe()
+    public CookingRecipe(String title, String author, int servings, RecipeType type, String cookingMethod, int prepMins, int cookMins)
     {
-        // initialise instance variables
-        x = 0;
+        super(title, author, servings, type);
+        this.cookingMethod = cookingMethod;
+        this.prepMins = prepMins;
+        this.cookMins = cookMins;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public String getCookingMethod() { return cookingMethod; }
+    public int getPrepMins() { return prepMins; }
+    public int getCookMins() { return cookMins; }
+
+    public int getTotalMins()
     {
-        // put your code here
-        return x + y;
+        return prepMins + cookMins;
+    }
+
+    @Override
+    public String getDetails()
+    {
+        return "Method: " + cookingMethod + " | Prep: " + prepMins + " mins | Cook: " + cookMins + " mins";
     }
 }
