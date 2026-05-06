@@ -2,8 +2,8 @@
 /**
  * Represents a cooking recipe.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Timur Turdaliev
+ * @version 1.0
  */
 public class CookingRecipe extends Recipe
 {

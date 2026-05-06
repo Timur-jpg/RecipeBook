@@ -2,8 +2,8 @@ import java.util.Scanner;
 /**
  * Driver class for the Recipe Book application.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Timur Turdaliev
+ * @version 1.0
  */
 public class Main
 {

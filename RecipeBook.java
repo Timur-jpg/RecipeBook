@@ -2,8 +2,8 @@ import java.util.ArrayList;
 /**
  * Represents a recipe book containing multiple recipes.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Timur Turdaliev
+ * @version 1.0
  */
 public class RecipeBook
 {
